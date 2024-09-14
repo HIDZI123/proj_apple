@@ -1,4 +1,3 @@
-/* eslint-disable no-unused-vars */
 import gsap from "gsap/all";
 import { useGSAP } from "@gsap/react";
 import { useState, useEffect } from "react";

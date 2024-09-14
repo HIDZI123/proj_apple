@@ -4,7 +4,7 @@ import { navLists } from "../constants";
 const NavBar = () => {
   return (
     <header className="w-full py-5 px-5 sm:px-10 flex justify-between items-center">
-      <nav className="flex w-full scrim-max-width ">
+      <nav className="flex w-full screen-max-width ">
         <img src={appleImg} alt="apple logo" width={14} height={18} />
 
         <div className="flex flex-1 justify-center items-center max-sm:hidden">
