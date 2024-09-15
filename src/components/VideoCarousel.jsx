@@ -1,4 +1,3 @@
-/* eslint-disable no-unused-vars */
 import { useRef } from "react";
 import { hightlightsSlides } from "../constants";
 import { useState } from "react";
