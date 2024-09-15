@@ -33,12 +33,12 @@ const HighLights = () => {
       className="w-screen overflow-hidden h-full bg-zinc common-padding"
     >
       <div className="screen-max-width">
-        <div className="mb-12 flex w-full items-end justify-between">
+        <div className="mb-12 w-full items-end justify-between md:flex">
           <h1 id="title" className="section-heading">
             Get the HighLights
           </h1>
 
-          <div className="flex flex-wrap items-end gap-5 mt-6">
+          <div className="flex flex-wrap items-end gap-5">
             <p className="link">
               Watch the film
               <img src={watchImg} alt="watch" className="ml-2" />
