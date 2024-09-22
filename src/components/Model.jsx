@@ -1,15 +1,17 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 /* eslint-disable no-unused-vars */
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
 import ModelView from "./ModelView";
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { yellowImg } from "../utils";
 gsap.registerPlugin(ScrollTrigger);
 import * as Three from "three";
 import { Canvas } from "@react-three/fiber";
 import { View } from "@react-three/drei";
 import { models, sizes } from "../constants";
+import { animateWithGsapTimeLine } from "../utils/animation";
 
 const Model = () => {
   const [size, setSize] = useState("small");
@@ -41,6 +43,23 @@ const Model = () => {
   //Rotation of the Models
   const [smallRotation, setSmallRotation] = useState(0);
   const [largeRotation, setLargeRotation] = useState(0);
+
+  const t1 = gsap.timeline();
+
+  useEffect(() => {
+    if (size === 'large'){
+      animateWithGsapTimeLine(t1, small, smallRotation, "#view1", "#view2", {
+        transform : "translateX(-100%)",
+        duration : 2,
+      } );
+    }
+    if (size === 'small'){
+      animateWithGsapTimeLine(t1, large, largeRotation, "#view2", "#view1", {
+        transform : "translateX(0)",
+        duration : 2,
+      } );
+    }
+  },[size])
 
   return (
     <section className="common-padding">
