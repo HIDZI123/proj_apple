@@ -4,6 +4,7 @@ import HighLights from "./components/HighLights";
 import Model from "./components/Model";
 import Features from "./components/Features";
 import Chips from "./components/Chips";
+import Footer from "./components/Footer";
 
 const App = () => {
   return (
@@ -14,6 +15,7 @@ const App = () => {
       <Model />
       <Features />
       <Chips />
+      <Footer />
     </main>
   );
 };
